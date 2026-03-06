@@ -26,7 +26,8 @@ html {
   --fw-bold: 700;
 
   /* Shadows */
-  --color-shadow: hsla(214, 17%, 51%, 0.671);
+  --card-shadow: hsla(206, 24%, 34%, 0.08);
+  --card-share-shadow: hsla(214, 17%, 51%, 0.671);
 }
 
 @font-face {
@@ -57,10 +58,11 @@ img {
 
 .card {
   background-color: var(--color-white-background);
+  box-shadow: 1rem 1rem 1.2rem var(--card-shadow);
+  border-radius: 0.67rem;
   position: relative;
 }
 
-.card,
 .card__share {
   border-end-start-radius: 0.67rem;
   border-end-end-radius: 0.67rem;
@@ -179,12 +181,11 @@ img {
 
   .card__share {
     border-radius: 0.6rem;
+    box-shadow: 0.37rem 0.37rem 0.87rem var(--card-share-shadow);
     padding: 1.37rem 2.8rem;
     width: auto;
     bottom: 5rem;
     right: -5.27rem;
-
-    box-shadow: 0.37rem 0.37rem 0.87rem var(--color-shadow);
   }
 
   .card__share::after {
@@ -212,10 +213,6 @@ img {
   }
 
   .card {
-    border-radius: 0;
-    border-start-end-radius: 0.67rem;
-    border-end-end-radius: 0.67rem;
-
     display: flex;
   }
 
