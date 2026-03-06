@@ -1,0 +1,235 @@
+* {
+  box-sizing: border-box;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+html {
+  font-size: 13px;
+}
+
+:root {
+  /* Font Colors */
+  --color-text-primary: hsl(217, 19%, 35%);
+  --color-text-secondary: hsl(214, 17%, 51%);
+  --color-text-muted: hsl(212, 23%, 69%);
+
+  /* Background Colors */
+  --color-muted-background: hsl(210, 46%, 95%);
+  --color-white-background: hsl(0, 0%, 100%);
+
+  /* Font Weights */
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  /* Shadows */
+  --color-shadow: hsla(214, 17%, 51%, 0.671);
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('./assets/fonts/Manrope-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('./assets/fonts/Manrope-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  background-color: var(--color-muted-background);
+  font-family: 'Manrope', sans-serif;
+  padding: 0 1rem;
+  margin-block-start: 5.5rem;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.card {
+  background-color: var(--color-white-background);
+  position: relative;
+}
+
+.card,
+.card__share {
+  border-end-start-radius: 0.67rem;
+  border-end-end-radius: 0.67rem;
+}
+
+.card__image {
+  background-image: url('./assets/images/drawers.jpg');
+  border-start-start-radius: 0.67rem;
+  border-start-end-radius: 0.67rem;
+  background-size: cover;
+  background-position: 70% 25%;
+  background-repeat: no-repeat;
+
+  height: 15.5rem;
+  margin-block-start: 4rem;
+}
+
+.card__content {
+  padding: 2.77rem;
+  padding-bottom: 1.37rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card__title {
+  font-size: clamp(1.27rem, 3vw, 1.57rem);
+}
+
+.card__title,
+.author__name {
+  color: var(--color-text-primary);
+  font-weight: var(--fw-bold);
+}
+
+.card__description {
+  color: var(--color-text-secondary);
+  font-size: 1.02rem;
+  line-height: 1.5;
+
+  margin: 1.27rem 0;
+  margin-block-end: 2.5rem;
+}
+
+.card__meta {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.card__date {
+  color: var(--color-text-muted);
+}
+
+.card__author {
+  display: flex;
+  align-items: center;
+  gap: 1.37rem;
+}
+
+.author__image {
+  border-radius: 50%;
+  width: 3rem;
+}
+
+.card__share {
+  background-color: var(--color-text-primary);
+  letter-spacing: 0.27rem;
+  padding: 2rem 2.77rem;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 1.37rem;
+}
+
+.card__share p {
+  color: var(--color-text-muted);
+}
+
+.share__button {
+  border: none;
+  border-radius: 50%;
+  background-color: var(--color-muted-background);
+  background-image: url('./assets/images/icon-share.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 45%;
+  cursor: pointer;
+  height: 2.6rem;
+  width: 2.6rem;
+  margin-left: auto;
+
+  z-index: 2;
+}
+
+/* Utility */
+.share__button--dark {
+  background-image: url('./assets/images/icon-share-white.svg');
+  background-color: var(--color-text-secondary);
+}
+.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 42.375rem) {
+  body {
+    margin: 0;
+  }
+
+  .card__share {
+    border-radius: 0.6rem;
+    padding: 1.37rem 2.8rem;
+    width: auto;
+    bottom: 5rem;
+    right: -5.27rem;
+
+    box-shadow: 0.37rem 0.37rem 0.87rem var(--color-shadow);
+  }
+
+  .card__share::after {
+    content: '';
+    position: absolute;
+    bottom: -1.23rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    border-width: 0.62rem;
+    border-style: solid;
+    border-color: var(--color-text-primary) transparent transparent transparent;
+  }
+
+  .wrapper {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .main {
+    margin: 0 auto;
+    max-width: 56rem;
+  }
+
+  .card {
+    border-radius: 0;
+    border-start-end-radius: 0.67rem;
+    border-end-end-radius: 0.67rem;
+
+    display: flex;
+  }
+
+  .card__image {
+    height: auto;
+    width: 40%;
+
+    border-radius: 0;
+    border-start-start-radius: 0.67rem;
+    border-end-start-radius: 0.67rem;
+    margin-block-start: 0;
+  }
+
+  .card__content {
+    flex: 1;
+  }
+}
