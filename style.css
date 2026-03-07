@@ -206,7 +206,6 @@ img {
     height: 1rem;
     background: var(--color-text-primary);
     transform: rotate(45deg);
-    translate: -50% 0;
   }
 
   .wrapper {
