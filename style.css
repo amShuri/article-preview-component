@@ -151,13 +151,10 @@ img {
 }
 
 .share__button {
-  border: none;
   border-radius: 50%;
-  background-color: var(--color-muted-background);
   background-image: url('./assets/images/icon-share.svg');
   background-repeat: no-repeat;
   background-position: 50% 45%;
-  cursor: pointer;
   height: 2.6rem;
   width: 2.6rem;
   margin-left: auto;
@@ -165,11 +162,32 @@ img {
   z-index: 2;
 }
 
+.share__button,
+.card__share-icon {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.share__button:focus {
+  box-shadow: 0 0 0 0.15rem var(--color-text-primary);
+}
+
+.card__share-icon:focus {
+  box-shadow: 0 0 0 0.15rem var(--color-white-background);
+}
+
+.card__share-icon {
+  background: none;
+  padding: 0.15rem;
+}
+
 /* Utility */
 .share__button--dark {
   background-image: url('./assets/images/icon-share-white.svg');
   background-color: var(--color-text-secondary);
 }
+
 .hidden {
   display: none;
 }
