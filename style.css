@@ -170,13 +170,13 @@ img {
   box-shadow: 0 0 0 0.15rem var(--color-text-primary);
 }
 
-.card__share-icon:focus {
-  box-shadow: 0 0 0 0.15rem var(--color-white-background);
-}
-
 .card__share-icon {
   background: none;
   padding: 0.15rem;
+}
+
+.card__share-icon:focus {
+  box-shadow: 0 0 0 0.15rem var(--color-white-background);
 }
 
 /* Utility */
