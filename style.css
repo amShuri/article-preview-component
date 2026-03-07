@@ -75,9 +75,6 @@ img {
 .card__content {
   padding: 2.77rem;
   padding-block-end: 1.37rem;
-
-  display: flex;
-  flex-direction: column;
 }
 
 .card__title {
@@ -207,7 +204,7 @@ img {
     left: 50%;
     transform: translateX(-50%);
 
-    border-width: 0.62rem;
+    border-width: 0.65rem;
     border-style: solid;
     border-color: var(--color-text-primary) transparent transparent transparent;
   }
@@ -229,17 +226,11 @@ img {
   }
 
   .card__image {
-    background-position: initial;
     border-radius: 0;
     border-start-start-radius: 0.67rem;
     border-end-start-radius: 0.67rem;
     margin-block-start: 0;
 
-    height: auto;
-    width: 40%;
-  }
-
-  .card__content {
-    flex: 1;
+    max-width: 40%;
   }
 }
