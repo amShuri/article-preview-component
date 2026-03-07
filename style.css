@@ -124,8 +124,8 @@ img {
   background-color: var(--color-text-primary);
   border-end-start-radius: 0.67rem;
   border-end-end-radius: 0.67rem;
-  letter-spacing: 0.27rem;
-  padding: 2rem 2.77rem;
+  letter-spacing: 0.3rem;
+  padding: 2rem 2.5rem;
 
   position: absolute;
   bottom: 0;
@@ -134,7 +134,7 @@ img {
 
   display: flex;
   align-items: center;
-  gap: 1.37rem;
+  gap: 1rem;
 }
 
 .card__share p {
@@ -200,13 +200,13 @@ img {
   .card__share::after {
     content: '';
     position: absolute;
-    bottom: -1.23rem;
+    bottom: -0.55rem;
     left: 50%;
-    transform: translateX(-50%);
-
-    border-width: 0.65rem;
-    border-style: solid;
-    border-color: var(--color-text-primary) transparent transparent transparent;
+    width: 1rem;
+    height: 1rem;
+    background: var(--color-text-primary);
+    transform: rotate(45deg);
+    translate: -50% 0;
   }
 
   .wrapper {
