@@ -74,7 +74,7 @@ img {
 
 .card__content {
   padding: 2.77rem;
-  padding-bottom: 1.37rem;
+  padding-block-end: 1.37rem;
 
   display: flex;
   flex-direction: column;
@@ -151,7 +151,7 @@ img {
   background-position: 50% 45%;
   height: 2.6rem;
   width: 2.6rem;
-  margin-left: auto;
+  margin-inline-start: auto;
 
   z-index: 2;
 }
